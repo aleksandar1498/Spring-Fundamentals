@@ -1,0 +1,22 @@
+
+r
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(Å—èŠ8íÈÊß®.H±ÄRMINORZ
+CODE_SMELL
+e
+java:S1612",Replace this lambda with a method reference.(‰‡äüüÿÿÿÿ8±¡Ïß®.H¿ÄRMINORZ
+CODE_SMELL
+e
+java:S1602",Remove useless curly braces around statement(‰‡äüüÿÿÿÿ8Ú«Íß®.H¹ÄRMINORZ
+CODE_SMELL
+j
+java:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8ğòµŞ®.HáÃRINFOZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿ8íÈÊß®.H²ÄRMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(ñÓÔ 8°ûÃß®.H¸ÄRMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(³€¸‡øÿÿÿÿ8Ì¨Âß®.H ÄRMAJORZ
+CODE_SMELL
+
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓŞÆ‰8Á´Û´®.Hë¹RMINORZ
+CODE_SMELL

@@ -1,0 +1,62 @@
+package bg.softuni.shopping.service.impl;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.shopping.common.enums.CategoryType;
+import bg.softuni.shopping.common.utils.ObjectMapper;
+import bg.softuni.shopping.domain.service.ProductServiceModel;
+import bg.softuni.shopping.persistence.entities.JpaCategory;
+import bg.softuni.shopping.persistence.entities.JpaProduct;
+import bg.softuni.shopping.persistence.repositories.CategoryRepository;
+import bg.softuni.shopping.persistence.repositories.ProductRepository;
+import bg.softuni.shopping.service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	private ProductRepository productRepo;
+	private CategoryRepository categoryRepo;
+
+	@Autowired
+	public ProductServiceImpl(ProductRepository productRepo, CategoryRepository categoryRepo) {
+		this.productRepo = productRepo;
+		this.categoryRepo = categoryRepo;
+	}
+
+	@Override
+	public void add(ProductServiceModel product) {
+		JpaProduct productToSave = ObjectMapper.map(product, JpaProduct.class);
+		JpaCategory category = this.categoryRepo.findByName(product.getCategory());
+		if (category == null) {
+			throw new EntityNotFoundException("A category of this type does not exist");
+		}
+		productToSave.setCategory(category);
+		this.productRepo.save(productToSave);
+	}
+
+	@Override
+	public List<ProductServiceModel> getAllProducts() {
+		return this.productRepo.findAll().stream().map(p -> {
+			ProductServiceModel prod = ObjectMapper.map(p, ProductServiceModel.class);
+			prod.setCategory(p.getCategory().getName());
+			return prod;
+		}).collect(Collectors.toList());
+	}
+
+	@Override
+	public void buy(String productId) {
+		System.out.println(productId);
+		this.productRepo.deleteById(productId);
+	}
+
+	@Override
+	public void buyAll() {
+		this.productRepo.deleteAll();
+	}
+
+}

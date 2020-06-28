@@ -1,0 +1,25 @@
+package com.enjoyit.utils;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class EntityToDTOConverter<S, D> implements Converter<S, D> {
+    private JpaRepository<S, Object> repo;
+    private Object id;
+
+    public EntityToDTOConverter(JpaRepository<S, Object> repo, Object id) {
+        this.id = id;
+        this.repo = repo;
+    }
+
+    @Override
+    public D convert(MappingContext<S, D> context) {
+        if (context.getSource() == null || context.getDestination() == null) {
+            return null;
+        }
+        S source = repo.findById(id).orElse(null);
+        return (D) ObjectMapper.map(source, context.getDestination().getClass());
+    }
+
+}

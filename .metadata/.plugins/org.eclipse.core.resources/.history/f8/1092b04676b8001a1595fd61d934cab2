@@ -1,0 +1,38 @@
+package bg.softuni.shopping.web.controllers;
+
+import java.util.Arrays;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import bg.softuni.shopping.common.enums.CategoryType;
+import bg.softuni.shopping.service.ProductService;
+
+@Controller("/")
+public class HomeController {
+	
+	private ProductService productService;
+	
+	@Autowired
+	public HomeController(ProductService productService) {
+		this.productService = productService;
+	}
+
+	@GetMapping
+	public String showHome(HttpSession session) {
+		return session.getAttribute("user") == null ? "index" : "redirect:/home";
+	}
+	
+	@GetMapping("home")
+	public ModelAndView viewHome(ModelAndView modelAndView) {
+		Arrays.stream(CategoryType.values()).forEach(c -> {
+			modelAndView.addObject(c.toString(), this.productService.getAllProducts());
+		});
+		modelAndView.setViewName("home");
+		return modelAndView;
+	}
+}

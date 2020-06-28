@@ -1,0 +1,29 @@
+package com.enjoyit.persistence;
+
+import java.util.List;
+
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.enjoyit.persistence.entities.JpaEvent;
+
+public interface User extends UserDetails{
+
+    /**
+     * @return
+     */
+    List<Event> getEvents();
+
+    /**
+     * @return
+     */
+    String getId();
+    /**
+     * @return
+     */
+    List<EventUser> getJoinedEvents();
+
+    @Override
+    String getUsername();
+
+    List<InterestEvent> getInterestedEvents();
+}

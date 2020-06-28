@@ -1,0 +1,13 @@
+
+c
+java:S19489".Make "joinedEvents" transient or serializable.(»ú¬ÁüÿÿÿÿHü¸RCRITICALZ
+CODE_SMELL
+X
+java:S19481"(Make "events" transient or serializable.(‚¥ÿ–Hû¸RCRITICALZ
+CODE_SMELL
+X
+java:S19486"(Make "authorities" private or transient.(ŠúHú¸RCRITICALZ
+CODE_SMELL
+g
+java:S1948<"2Make "interestedEvents" transient or serializable.(ğû”˜ıÿÿÿÿHı¸RCRITICALZ
+CODE_SMELL

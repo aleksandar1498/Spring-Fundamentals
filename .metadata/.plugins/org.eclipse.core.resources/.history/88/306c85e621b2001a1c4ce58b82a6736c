@@ -1,0 +1,24 @@
+package bg.softuni.andreys.persistence.entities;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.persistence.Category;
+
+public class JpaCategory extends BaseEntity implements Category {
+
+	public JpaCategory() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public CategoryType getCategoryType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,27 @@
+
+l	java:S106Z"9Replace this use of System.out or System.err by a logger.(•ÔÖµ8Êüí¸¬.H€™RMAJORZ
+CODE_SMELL
+s
+java:S1128	"?Remove this unused import 'org.modelmapper.spi.MappingContext'.(Û‘¨8´ë²Œ¬.Hş”RMINORZ
+CODE_SMELL
+a
+java:S1068&"-Remove this unused "converter" private field.(Óôô8›ŠæŒ¬.Hı”RMAJORZ
+CODE_SMELL
+j
+java:S1128"6Remove this unused import 'org.modelmapper.Converter'.(ŞÃ­È8Ìæ”Œ¬.H•RMINORZ
+CODE_SMELL
+Œ
+java:S1128"XRemove this unused import 'bg.softuni.judge.domain.models.service.ExerciseServiceModel'.(±‹«×8Ìæ”Œ¬.H‚•RMINORZ
+CODE_SMELL
+‰
+java:S11926"MDefine a constant instead of duplicating this literal "homework-add" 3 times.(“Ç‹¢ıÿÿÿÿ8‰Œ·˜¬.Hö–RCRITICALZ
+CODE_SMELL
+b
+java:S1905B"/Remove this unnecessary cast to "LoggedInUser".(ñ®Í`8Í–ä¬.H€•RMINORZ
+CODE_SMELL
+f
+java:S1068'"2Remove this unused "rolesConverter" private field.(Ïõ•8ìïÛ¬.Hÿ”RMAJORZ
+CODE_SMELL
+v
+java:S1117A"CRename "homeworkService" which hides the field declared at line 36.(Œ‹áV8œ©º˜¬.Hı–RMAJORZ
+CODE_SMELL

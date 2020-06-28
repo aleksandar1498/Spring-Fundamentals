@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<th:block th:replace="~{fragments/header::head('Patients')}"/>
+<body>
+	<main>
+		<th:block th:replace="~{fragments/navigation-bar::nav}" />
+		<div class="container">
+			<h2 class="text-center mt-5">Kin4You Patients</h2>
+			<hr style="width: 50%" />
+			<div class='row mb-4 d-flex justify-content-around'>
+				<table class="table table-hover table-striped" >
+					<thead class="text-white">
+						<tr>
+							<th scope="col">First Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="p : ${patients}" th:object="${p}">
+							<td th:text="*{firstName}"></td>
+							<td th:text="*{lastName}"></td>
+							<td><a class="btn-block"
+								th:href="@{/patients/details/{id}(id=*{id})}">Details</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+
+		</div>
+	</main>
+</body>
+</html>

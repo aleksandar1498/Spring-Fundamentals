@@ -1,0 +1,25 @@
+
+…
+java:S1192I"IDefine a constant instead of duplicating this literal "register" 3 times.(ã‹¥œúÿÿÿÿ8¦ñçª.Hº•RCRITICALZ
+CODE_SMELL
+‚
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.RequestBody'.(â­½ÀıÿÿÿÿH»•RMINORZ
+CODE_SMELL
+`
+java:S1612>",Replace this lambda with a method reference.(‰Ó€ˆ8¶ñòŒ¬.H¼•RMINORZ
+CODE_SMELL
+
+java:S1128"\Remove this unused import 'bg.softuni.judge.domain.models.service.UserRegisterServiceModel'.(×ÇâÑıÿÿÿÿH½•RMINORZ
+CODE_SMELL
+r
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8’…Å«.H¾•RMINORZ
+CODE_SMELL
+‚
+java:S11921"FDefine a constant instead of duplicating this literal "login" 3 times.(³óäÍüÿÿÿÿ8’…Å«.H¿•RCRITICALZ
+CODE_SMELL
+†
+java:S1128"YRemove this unused import 'bg.softuni.judge.domain.models.service.UserLoginServiceModel'.(†¼Õ˜HÀ•RMINORZ
+CODE_SMELL
+
+java:S1128"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8¯…öçª.HÁ•RMINORZ
+CODE_SMELL

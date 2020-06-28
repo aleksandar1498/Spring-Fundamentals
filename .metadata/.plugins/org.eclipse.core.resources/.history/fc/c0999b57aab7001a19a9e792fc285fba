@@ -1,0 +1,14 @@
+package bg.softuni.judge.services;
+
+import bg.softuni.judge.domain.models.binding.LoggedInUser;
+import bg.softuni.judge.domain.models.service.CommentServiceModel;
+import bg.softuni.judge.domain.models.service.HomeworkServiceModel;
+
+public interface HomeworkService {
+	HomeworkServiceModel create(HomeworkServiceModel homework);
+
+	String getRandomId();
+
+	HomeworkServiceModel comment(CommentServiceModel map, String homeworkId, String userID);
+
+}

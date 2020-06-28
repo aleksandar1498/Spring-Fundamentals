@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<th:block th:replace="~{fragments/header::head('Kin4You')}"/>
+<body>
+<main class="main">
+  <th:block th:replace="~{fragments/navigation-bar::nav}" />
+    <div class="container-fluid">
+        <h2 class="text-center">Kin4You</h2>
+        <hr style="width: 50%"/>
+        <h4 class="font-italic text-center">
+            By clicking the buttons below you can check your registerd patients and register a new one.
+        </h4>
+        <br/>
+        <div class="text-center">
+            <a class="btn btn-secondary text-center mr-4" th:href="@{/patients/register}">Register Patients</a>
+            <a class="btn btn-secondary text-center ml-4" th:href="@{/patients}">View Patients</a>
+        </div>
+    </div>
+</main>
+</body>
+</html>

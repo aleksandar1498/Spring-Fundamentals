@@ -1,0 +1,9 @@
+package bg.softuni.andreys.config;
+
+public class ApplicationBeanConfiguration {
+
+	public ApplicationBeanConfiguration() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

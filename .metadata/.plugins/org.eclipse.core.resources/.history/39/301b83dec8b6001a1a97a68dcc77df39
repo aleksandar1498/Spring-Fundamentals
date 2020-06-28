@@ -1,0 +1,31 @@
+package com.enjoyit.utils;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.modelmapper.spi.MappingContext;
+
+import com.enjoyit.domain.dto.EventUserDTO;
+import com.enjoyit.domain.dto.UserDTO;
+import com.enjoyit.persistence.EventUser;
+import com.enjoyit.persistence.entities.JpaEvent;
+
+public class EventUserListConverter extends ListConverter<JpaEvent, EventUserDTO> {
+
+    @Override
+    public List<EventUserDTO> convert(final MappingContext<List<EventUser>, List<EventUserDTO>> context) {
+        System.out.println(context.getSource()+" "+context.getDestination());
+        if(context.getSource() != null) {
+            for(EventUser e : context.getSource()) {
+                System.out.println(e.toString());
+                System.out.println(ObjectMapper.map(e, EventUserDTO.class));
+            }
+        }
+        if (context.getSource() == null || context.getDestination() == null) {
+            return new ArrayList<EventUserDTO>();
+        }
+        return (List<EventUserDTO>) ObjectMapper.mapAll(context.getSource().stream().map(e -> e.getUser()).collect(Collectors.toList()), context.getDestination().getClass());
+    }
+
+}

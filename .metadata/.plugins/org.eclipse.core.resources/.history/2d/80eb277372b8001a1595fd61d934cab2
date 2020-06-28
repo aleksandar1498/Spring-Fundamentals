@@ -1,0 +1,34 @@
+package bg.softuni.shopping.domain.binding;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
+import com.sun.istack.NotNull;
+
+import bg.softuni.shopping.common.enums.CategoryType;
+import bg.softuni.shopping.persistence.entities.JpaCategory;
+
+public class ProductAddModel {
+
+	@Size(min = 3,max = 20 , message = "Product must be between 2 and 20 characters")
+	private String name;
+	
+	@Size(min = 3, message = "Description must be at least 5 character")
+	private String description;
+	
+	@Positive
+	private BigDecimal price;
+	
+	@FutureOrPresent
+	private LocalDateTime neededBefore;
+	
+	@NotNull
+	private CategoryType category;
+}

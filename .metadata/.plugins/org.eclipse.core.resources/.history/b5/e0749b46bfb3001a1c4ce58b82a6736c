@@ -1,0 +1,18 @@
+package bg.softuni.andreys.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter;
+import org.springframework.format.FormatterRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import bg.softuni.andreys.utils.EnumToServiceConverter;
+
+public class WebMVCConfiguration implements WebMvcConfigurer {
+	@Autowired
+	private EnumToServiceConverter converter;
+
+	@Override
+	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(converter);
+	}
+}

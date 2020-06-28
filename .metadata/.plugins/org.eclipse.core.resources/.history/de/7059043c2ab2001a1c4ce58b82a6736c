@@ -1,0 +1,46 @@
+package bg.softuni.andreys.service.impl;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.andreys.domain.service.UserLoginServiceModel;
+import bg.softuni.andreys.domain.service.UserRegisterServiceModel;
+import bg.softuni.andreys.domain.service.UserServiceModel;
+import bg.softuni.andreys.persistence.entities.JpaUser;
+import bg.softuni.andreys.persistence.repositories.UserRepository;
+import bg.softuni.andreys.service.AuthService;
+
+@Service
+public class AuthServiceImpl implements AuthService {
+
+	private ModelMapper mapper;
+	private UserRepository userRepo;
+	
+	
+	public AuthServiceImpl(ModelMapper mapper, UserRepository userRepo) {
+		this.mapper = mapper;
+		this.userRepo = userRepo;
+	}
+
+	@Override
+	public UserServiceModel login(UserLoginServiceModel loginUser) {
+		JpaUser userFromDB = (JpaUser) this.userRepo.findByUsername(loginUser.getUsername()).orElseThrow(() -> {
+			return new EntityNotFoundException("A USER WITH THIS USERNAME DOES NOT EXISTS");
+		});
+		
+		if(!userFromDB.getPassword().equals(loginUser.getPassword())) {
+			throw new IllegalArgumentException("FAILED AUTHENTICATION");
+		}
+		
+		return this.mapper.map(userFromDB,UserServiceModel.class);
+	}
+
+	@Override
+	public UserServiceModel register(UserRegisterServiceModel registerUser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

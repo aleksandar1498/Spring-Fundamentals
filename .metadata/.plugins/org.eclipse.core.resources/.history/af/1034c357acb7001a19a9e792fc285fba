@@ -1,0 +1,5 @@
+package bg.softuni.judge.services;
+
+public interface CommentService {
+
+}

@@ -1,0 +1,5 @@
+package com.enjoyit.utils;
+
+public class GenericListConverter extends ListConverter<S, D> {
+
+}

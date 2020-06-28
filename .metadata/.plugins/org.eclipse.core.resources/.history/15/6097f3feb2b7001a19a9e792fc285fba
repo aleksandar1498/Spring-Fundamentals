@@ -1,0 +1,5 @@
+package bg.softuni.judge.utils;
+
+public class DTOtoEntityConverter {
+
+}

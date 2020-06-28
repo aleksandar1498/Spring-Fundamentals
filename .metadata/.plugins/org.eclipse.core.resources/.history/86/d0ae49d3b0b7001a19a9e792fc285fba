@@ -1,0 +1,9 @@
+package bg.softuni.judge.persistence.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import bg.softuni.judge.persistence.entities.JpaComment;
+
+public interface CommentRepository extends JpaRepository<JpaComment, String> {
+
+}

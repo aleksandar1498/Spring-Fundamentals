@@ -1,0 +1,22 @@
+
+l
+java:S1128"8Remove this unused import 'org.modelmapper.PropertyMap'.(ïÓ§8Ñµ³™¬.H´˜RMINORZ
+CODE_SMELL
+‘
+java:S1128"XRemove this unused import 'bg.softuni.judge.utils.RolesEnumToRoleServiceModelConverter'.(‘º’’ÿÿÿÿÿ8õÎß–¬.H”•RMINORZ
+CODE_SMELL
+j
+java:S1128"6Remove this unused import 'org.modelmapper.Converter'.(ŞÃ­È8¸Í·™¬.HÆ˜RMINORZ
+CODE_SMELL
+„
+java:S1128"PRemove this unused import 'bg.softuni.judge.domain.models.binding.LoggedInUser'.(ß÷Á™8×±µ¬.HŠ•RMINORZ
+CODE_SMELL
+
+java:S1128"TRemove this unused import 'bg.softuni.judge.domain.models.service.UserServiceModel'.(é–†¹ûÿÿÿÿ8¸Í·™¬.HÇ˜RMINORZ
+CODE_SMELL
+s
+java:S1128"?Remove this unused import 'org.modelmapper.spi.MappingContext'.(Û‘¨8¸Í·™¬.HÅ˜RMINORZ
+CODE_SMELL
+m
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8ÒÏ˜¬.H“—RMINORZ
+CODE_SMELL

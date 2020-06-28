@@ -1,0 +1,16 @@
+
+\
+java:S3740-"/Provide the parametrized type for this generic.(£ê‘ÁHÇ¹RMAJORZ
+CODE_SMELL
+l	java:S1064"9Replace this use of System.out or System.err by a logger.(®Éİÿ8ÿ¯å®.HÊ¹RMAJORZ
+CODE_SMELL
+l	java:S106I"9Replace this use of System.out or System.err by a logger.(—Ş—Ü8îÒ£®.HÈ¹RMAJORZ
+CODE_SMELL
+q	java:S1063"9Replace this use of System.out or System.err by a logger.(µĞÿÿÿÿÿ8èÊÍ´®.HË¹RMAJORZ
+CODE_SMELL
+h
+java:S3740="/Provide the parametrized type for this generic.(Ó¬êïıÿÿÿÿ8İŒ¥…®.HÉ¹RMAJORZ
+CODE_SMELL
+a
+java:S37402"/Provide the parametrized type for this generic.(Ô¿•„ùÿÿÿÿHÆ¹RMAJORZ
+CODE_SMELL

@@ -1,0 +1,43 @@
+package bg.softuni.andreys.persistence.entities;
+
+import bg.softuni.andreys.common.enums.Gender;
+import bg.softuni.andreys.persistence.Category;
+import bg.softuni.andreys.persistence.Item;
+
+public class JpaItem extends BaseEntity implements Item {
+
+	public JpaItem() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Double getPrice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category getCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Gender getGender() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

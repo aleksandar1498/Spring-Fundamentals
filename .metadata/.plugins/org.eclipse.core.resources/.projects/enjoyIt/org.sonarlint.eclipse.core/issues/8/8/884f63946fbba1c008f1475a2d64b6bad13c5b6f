@@ -1,0 +1,11 @@
+
+s	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(€ˆê*8Ì¿¦®.Hæ»RMAJORZ
+CODE_SMELL
+’
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(×Â±…ıÿÿÿÿ8èÕıâ®.HËÈRMINORZ
+CODE_SMELL
+
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¦˜µŒ8èÕıâ®.HÌÈRMINORZ
+CODE_SMELL
+z	java:S107$"BConstructor has 10 parameters, which is greater than 7 authorized.(ü‘„Ìıÿÿÿÿ8Ì¿¦®.Hç»RMAJORZ
+CODE_SMELL

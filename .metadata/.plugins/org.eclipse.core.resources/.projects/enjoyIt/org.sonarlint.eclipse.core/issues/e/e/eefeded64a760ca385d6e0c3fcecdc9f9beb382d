@@ -1,0 +1,11 @@
+
+q	java:S106"9Replace this use of System.out or System.err by a logger.(‘Ù¼şÿÿÿÿ8Õäİ‚®.H—¢RMAJORZ
+CODE_SMELL
+’
+java:S1171!"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8µ¼°…®.Hñ¡RMAJORZ
+CODE_SMELL
+Y
+java:S3599 ",Use another way to initialize this instance.(óÂ£Ø8µ¼°…®.Hğ¡RMINORZBUG
+^
+java:S1602",Remove useless curly braces around statement(€Ä‡¡ùÿÿÿÿHÙ¡RMINORZ
+CODE_SMELL

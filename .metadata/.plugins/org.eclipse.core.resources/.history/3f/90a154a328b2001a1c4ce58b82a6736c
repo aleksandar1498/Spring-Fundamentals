@@ -1,0 +1,8 @@
+package bg.softuni.andreys.service;
+
+import bg.softuni.andreys.domain.service.UserServiceModel;
+
+public interface AuthService {
+	UserServiceModel login();
+	UserServiceModel register();
+}

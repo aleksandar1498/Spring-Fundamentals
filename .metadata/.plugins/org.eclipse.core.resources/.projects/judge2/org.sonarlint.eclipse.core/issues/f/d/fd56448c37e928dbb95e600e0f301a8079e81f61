@@ -1,0 +1,25 @@
+
+p
+java:S1128"DRemove this unused import 'org.springframework.web.util.UriBuilder'.(ÆÆÙHûRMINORZ
+CODE_SMELL
+s
+java:S1128"FRemove this unused import 'org.springframework.core.annotation.Order'.(ÖŽ¨æHüRMINORZ
+CODE_SMELL
+n
+java:S1128"5Remove this unused import 'java.nio.charset.Charset'.(ü¶ØŸýÿÿÿÿ8ˆè‚Å«.H‡‚RMINORZ
+CODE_SMELL
+l
+java:S1128"?Remove this unused import 'javax.servlet.annotation.WebFilter'.(ï¸ÝôHþRMINORZ
+CODE_SMELL
+w
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Þ÷Ñ¸ÿÿÿÿÿHýRMINORZ
+CODE_SMELL
+o
+java:S45517"BUse "==" to perform this enum comparison instead of using "equals"(úë…úH€‚RMAJORZ
+CODE_SMELL
+r
+java:S1128">Remove this unused import 'java.nio.charset.StandardCharsets'.(ï˜ÞÛ8×ï×Æ«.HªƒRMINORZ
+CODE_SMELL
+d
+java:S1128"0Remove this unused import 'java.net.URLEncoder'.(ê¢ºÆ8×ï×Æ«.H«ƒRMINORZ
+CODE_SMELL

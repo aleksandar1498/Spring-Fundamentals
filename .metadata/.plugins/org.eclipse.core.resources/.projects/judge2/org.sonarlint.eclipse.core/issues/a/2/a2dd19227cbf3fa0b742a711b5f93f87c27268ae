@@ -1,0 +1,10 @@
+
+\
+java:S1068"*Remove this unused "mapper" private field.(„¶¹˜ÿÿÿÿÿH‹RMAJORZ
+CODE_SMELL
+y
+java:S1192'"IDefine a constant instead of duplicating this literal "role-add" 3 times.(ÙµÜHˆRCRITICALZ
+CODE_SMELL
+Y
+java:S1612&",Replace this lambda with a method reference.(˜ÉĞŠH‰RMINORZ
+CODE_SMELL

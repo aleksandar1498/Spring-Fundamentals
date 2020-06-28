@@ -1,0 +1,11 @@
+package bg.softuni.shopping.persistence.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import bg.softuni.shopping.persistence.entities.JpaUser;
+
+public interface UserRepository extends JpaRepository<JpaUser, String> {
+
+	JpaUser findByUsername(String username);
+
+}

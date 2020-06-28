@@ -1,0 +1,27 @@
+package bg.softuni.andreys.domain.service;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.common.enums.Gender;
+import bg.softuni.andreys.persistence.Category;
+import bg.softuni.andreys.persistence.entities.JpaCategory;
+
+public class ItemServiceModel {
+	
+	private String name;
+	
+	private String description;
+	
+	private Double price;
+
+	private CategoryType category;
+
+	private Gender gender;
+
+}

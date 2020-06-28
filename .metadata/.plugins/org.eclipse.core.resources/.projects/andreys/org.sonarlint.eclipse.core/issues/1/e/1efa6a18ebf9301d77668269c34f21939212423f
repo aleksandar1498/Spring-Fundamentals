@@ -1,0 +1,13 @@
+
+a
+java:S1068"-Remove this unused "converter" private field.( Ôí’8©±ì¹­.HˆŸRMAJORZ
+CODE_SMELL
+q	java:S1060"9Replace this use of System.out or System.err by a logger.(éİÌâıÿÿÿÿ8„şå¹­.H…ŸRMAJORZ
+CODE_SMELL
+q	java:S1064"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8„şå¹­.H†ŸRMAJORZ
+CODE_SMELL
+€
+java:S1192&"IDefine a constant instead of duplicating this literal "add-item" 4 times.(ÕğÄå8äã±¹­.HÜRCRITICALZ
+CODE_SMELL
+l	java:S106/"9Replace this use of System.out or System.err by a logger.(Òà´Ç8ƒş¸­.HÛRMAJORZ
+CODE_SMELL

@@ -1,0 +1,18 @@
+package com.enjoyit.utils;
+
+import org.hibernate.persister.entity.PropertyMapping;
+import org.modelmapper.PropertyMap;
+
+import com.enjoyit.domain.dto.EventDTO;
+import com.enjoyit.persistence.Event;
+import com.enjoyit.persistence.entities.JpaEvent;
+
+public class MappingEvent extends PropertyMap<EventDTO, Event>{
+
+    @Override
+    protected void configure() {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

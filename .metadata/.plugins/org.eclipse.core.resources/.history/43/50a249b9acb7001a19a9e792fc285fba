@@ -1,0 +1,14 @@
+package bg.softuni.judge.services.impl;
+
+import bg.softuni.judge.domain.models.service.CommentServiceModel;
+import bg.softuni.judge.services.CommentService;
+
+public class CommentServiceImpl implements CommentService {
+
+	@Override
+	public CommentServiceModel comment(CommentServiceModel map, String homeworkId, String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

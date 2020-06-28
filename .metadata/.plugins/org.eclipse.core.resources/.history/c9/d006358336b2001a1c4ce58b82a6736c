@@ -1,0 +1,12 @@
+package bg.softuni.andreys.service;
+
+import java.util.List;
+
+import bg.softuni.andreys.domain.service.ItemServiceModel;
+
+public interface ItemService {
+	ItemServiceModel create(ItemServiceModel item);
+	ItemServiceModel remove(String itemId);
+	ItemServiceModel find(String itemId);
+	List<ItemServiceModel> findAll();
+}

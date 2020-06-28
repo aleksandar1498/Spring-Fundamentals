@@ -1,0 +1,31 @@
+package bg.softuni.andreys.persistence.entities;
+
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.persistence.Category;
+
+public class JpaCategory extends BaseEntity implements Category {
+
+	@Enumerated(EnumType.STRING)
+	private CategoryType categoryType;
+	
+	@Column(columnDefinition = "TEXT")
+	private String description;
+
+	public JpaCategory() {
+	}
+
+	@Override
+	public CategoryType getCategoryType() {
+		return this.categoryType;
+	}
+
+	@Override
+	public String getDescription() {
+		return this.description;
+	}
+
+}

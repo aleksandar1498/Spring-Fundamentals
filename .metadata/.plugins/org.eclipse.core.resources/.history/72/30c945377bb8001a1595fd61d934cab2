@@ -1,0 +1,23 @@
+package bg.softuni.shopping.web.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import bg.softuni.shopping.service.ProductService;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+	private ProductService productService;
+	
+	@Autowired
+	public UserController(ProductService productService) {
+		this.productService = productService;
+	}
+
+
+	
+}

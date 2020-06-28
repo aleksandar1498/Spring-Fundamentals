@@ -1,0 +1,11 @@
+package bg.softuni.shopping.persistence.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "products",uniqueConstraints = @UniqueConstraint(columnNames = "name"))
+public class JpaProduct extends BaseEntity {
+
+}

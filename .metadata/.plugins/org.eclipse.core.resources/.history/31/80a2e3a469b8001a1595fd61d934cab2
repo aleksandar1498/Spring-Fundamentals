@@ -1,0 +1,29 @@
+package bg.softuni.shopping.config;
+
+import java.util.Arrays;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import bg.softuni.shopping.common.enums.CategoryType;
+import bg.softuni.shopping.persistence.entities.JpaCategory;
+import bg.softuni.shopping.persistence.repositories.CategoryRepository;
+import bg.softuni.shopping.service.CategoryService;
+
+public class DataInitializer implements CommandLineRunner {
+	
+	@Autowired
+	private CategoryRepository categoryRepo;
+	@Override
+	public void run(String... args) throws Exception {
+		if (this.categoryRepo.count() == 0) {
+			Arrays.stream(CategoryType.values()).forEach(c -> {
+				this.categoryRepo.save(new JpaCategory(c,"Description for "+c.toString()));
+			});
+			this.categoryRepo.saveAll(Set.of(new JpaCategory(CategoryType.DENIM, "Denim"),
+					new JpaCategory(CategoryType.JACKET, "Jacket"), new JpaCategory(CategoryType.SHIRT, "Shirt"),
+					new JpaCategory(CategoryType.SHORTS, "Shorts")));
+		}
+	}
+
+}

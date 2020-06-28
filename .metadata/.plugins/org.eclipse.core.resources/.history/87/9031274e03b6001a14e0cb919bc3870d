@@ -1,0 +1,7 @@
+package com.enjoyit.utils;
+
+import org.modelmapper.Converters.Converter;
+
+public class EventDTOtoEntityCoverter implements Converter<S, D> {
+
+}

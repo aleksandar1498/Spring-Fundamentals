@@ -1,0 +1,8 @@
+
+k	java:S106&"9Replace this use of System.out or System.err by a logger.(é·…Š8»ÇÆö¨.HîlRMAJORZ
+CODE_SMELL
+k	java:S106/"9Replace this use of System.out or System.err by a logger.(Ï¢³İ8»ÇÆö¨.HïlRMAJORZ
+CODE_SMELL
+
+java:S1128"WRemove this unused import 'bg.softuni.dealer.persistence.repositories.BrandRepository'.(Ìß¶Èùÿÿÿÿ8¿­÷¨.H°mRMINORZ
+CODE_SMELL

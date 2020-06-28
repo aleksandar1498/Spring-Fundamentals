@@ -1,0 +1,7 @@
+package bg.softuni.judge.utils;
+
+import org.modelmapper.Converter;
+
+public class HomeworkServiceModelToJpa implements Converter<HomeworkServiceModel, JpaHomework> {
+
+}

@@ -1,0 +1,28 @@
+package bg.softuni.judge.utils;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
+
+import bg.softuni.judge.domain.models.service.BaseServiceModel;
+
+
+public class ServiceToEntityConverter<S extends BaseServiceModel,D> implements Converter<S, D>{
+	private JpaRepository<D, String> repo;
+	
+	public ServiceToEntityConverter(JpaRepository<D, String> repo) {
+		this.repo = repo;
+	}
+
+	@Override
+	public D convert(MappingContext<S, D> context) {
+		System.out.println("CALLED "+context.getSource());
+		if(context.getSource() == null) {
+			return null;
+		}
+		
+		return  (D) this.repo.findById(context.getSource().getId());
+	}
+
+}

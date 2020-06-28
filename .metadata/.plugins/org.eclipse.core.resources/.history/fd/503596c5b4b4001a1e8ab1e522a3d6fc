@@ -1,0 +1,5 @@
+package com.enjoyit.config;
+
+public class ExceptionHandler {
+
+}

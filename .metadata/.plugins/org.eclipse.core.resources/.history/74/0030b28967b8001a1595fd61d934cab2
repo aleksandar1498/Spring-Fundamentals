@@ -1,0 +1,31 @@
+package bg.softuni.shopping.persistence.entities;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "products",uniqueConstraints = @UniqueConstraint(columnNames = "name"))
+public class JpaProduct extends BaseEntity {
+
+	@Column
+	private String name;
+	
+	@Column
+	private String description;
+	
+	@Column
+	private BigDecimal price;
+	
+	@Column
+	private LocalDateTime neededBefore;
+	
+	@Column
+	private JpaCategory category;
+	
+	
+}

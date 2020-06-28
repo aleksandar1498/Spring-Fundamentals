@@ -1,0 +1,2 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Added generic list converter for entity -&gt; dto and viceversa</message>\r\n<message>Implemented event creation with optimization in architecture</message>\r\n<message>Added Exception Handling</message>\r\n</messages>
+eclipse.preferences.version=1

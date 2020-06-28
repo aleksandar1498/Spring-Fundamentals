@@ -1,0 +1,5 @@
+package bg.softuni.andreys.common.enums;
+
+public enum CategoryType {
+
+}

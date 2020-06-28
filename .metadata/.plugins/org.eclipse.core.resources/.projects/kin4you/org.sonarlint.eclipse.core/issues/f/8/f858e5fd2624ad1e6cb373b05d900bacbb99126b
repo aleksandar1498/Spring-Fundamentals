@@ -1,0 +1,10 @@
+
+¼
+java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(à¾†™úÿÿÿÿ8¢¼äø©.HÊvRCRITICALZ
+CODE_SMELL
+m
+java:S1128":Remove this unused import 'javax.persistence.CascadeType'.( ì¤Ê8åääø©.HÏvRMINORZ
+CODE_SMELL
+r
+java:S1128"@Remove this unused import 'org.hibernate.annotations.ManyToAny'.(äÄè,8ê€·ñ©.H¦uRMINORZ
+CODE_SMELL

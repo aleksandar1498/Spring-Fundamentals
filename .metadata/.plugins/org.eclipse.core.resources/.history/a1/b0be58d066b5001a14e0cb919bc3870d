@@ -1,0 +1,65 @@
+package com.enjoyit.domain.dto;
+
+import java.time.LocalDateTime;
+
+public class BaseEventDTO {
+    private String title;
+    private String location;
+    private String description;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
+
+    public BaseEventDTO() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDateTime getEndDate() {
+        return endDate;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public LocalDateTime getStartDate() {
+        return startDate;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+    
+    
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStartDate(LocalDateTime startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setEndDate(LocalDateTime endDate) {
+        this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseEventDTO [title=" + title + ", location=" + location + ", description=" + description
+                + ", startDate=" + startDate + ", endDate=" + endDate + "]";
+    }
+
+
+}

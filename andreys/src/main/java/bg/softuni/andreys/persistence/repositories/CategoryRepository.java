@@ -1,0 +1,14 @@
+package bg.softuni.andreys.persistence.repositories;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.persistence.entities.JpaCategory;
+
+@Repository
+public interface CategoryRepository extends JpaRepository<JpaCategory, String> {
+	Optional<JpaCategory> findByCategoryType(CategoryType categoryType);
+}

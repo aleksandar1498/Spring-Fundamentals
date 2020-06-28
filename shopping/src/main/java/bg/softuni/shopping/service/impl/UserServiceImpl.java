@@ -1,0 +1,49 @@
+package bg.softuni.shopping.service.impl;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.stereotype.Service;
+import bg.softuni.shopping.common.utils.ObjectMapper;
+import bg.softuni.shopping.domain.service.UserLoginServiceModel;
+import bg.softuni.shopping.domain.service.UserRegisterServiceModel;
+import bg.softuni.shopping.domain.service.UserServiceModel;
+import bg.softuni.shopping.persistence.entities.JpaUser;
+import bg.softuni.shopping.persistence.repositories.UserRepository;
+import bg.softuni.shopping.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	private UserRepository userRepo;
+
+	public UserServiceImpl(UserRepository userRepo) {
+		this.userRepo = userRepo;
+	}
+
+	@Override
+	public UserServiceModel login(UserLoginServiceModel loginUser) {
+		JpaUser userFromDB = (JpaUser) this.userRepo.findByUsername(loginUser.getUsername()).orElseThrow(() -> {
+			return new EntityNotFoundException("A USER WITH THIS USERNAME DOES NOT EXISTS");
+		});
+
+		if (!userFromDB.getPassword().equals(loginUser.getPassword())) {
+			throw new IllegalArgumentException("FAILED AUTHENTICATION");
+		}
+
+		return ObjectMapper.map(userFromDB, UserServiceModel.class);
+	}
+
+	@Override
+	public UserServiceModel register(UserRegisterServiceModel registerUser) {
+		if (this.userRepo.findByUsername(registerUser.getUsername()).isPresent()) {
+			throw new IllegalArgumentException("USER ALREADY EXISTS");
+		}
+		if (!registerUser.getPassword().equals(registerUser.getConfirmPassword())) {
+			throw new IllegalArgumentException("PASSWORDS DO NOT MATCH");
+		}
+
+		JpaUser userToSave = ObjectMapper.map(registerUser, JpaUser.class);
+
+		return ObjectMapper.map(this.userRepo.save(userToSave), UserServiceModel.class);
+	}
+	
+}

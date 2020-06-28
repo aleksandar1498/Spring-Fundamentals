@@ -1,0 +1,76 @@
+package bg.softuni.judge.services.impl;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.judge.domain.models.service.CommentServiceModel;
+import bg.softuni.judge.domain.models.service.HomeworkServiceModel;
+import bg.softuni.judge.domain.models.service.UserServiceModel;
+import bg.softuni.judge.persistence.entities.JpaComment;
+import bg.softuni.judge.persistence.entities.JpaHomework;
+import bg.softuni.judge.persistence.entities.JpaUser;
+import bg.softuni.judge.persistence.repositories.CommentRepository;
+import bg.softuni.judge.services.CommentService;
+import bg.softuni.judge.services.HomeworkService;
+import bg.softuni.judge.services.UserService;
+import bg.softuni.judge.utils.HomeworkServiceModelToJpa;
+
+@Service
+public class CommentServiceImpl implements CommentService {
+	private ModelMapper mapper;
+	private HomeworkService homeworkService;
+	private UserService userService;
+	private CommentRepository commentRepo;
+	PropertyMap<HomeworkServiceModel, JpaHomework> skipModifiedFieldsMap = new PropertyMap<HomeworkServiceModel, JpaHomework>() {
+		protected void configure() {
+			skip().setAuthor(null);
+			skip().setExercise(null);
+			skip().setComments(null);
+		}
+	};
+
+	@Autowired
+	public CommentServiceImpl(ModelMapper mapper, HomeworkService homeworkService, UserService userService,
+			CommentRepository commentRepo,HomeworkServiceModelToJpa converter) {
+		this.mapper = mapper;
+		this.mapper.addMappings(new PropertyMap<HomeworkServiceModel, JpaHomework>() {
+			protected void configure() {
+				skip().setAuthor(null);
+				skip().setExercise(null);
+				skip().setComments(null);
+			}
+		})
+		this.mapper.addConverter(converter);
+		this.homeworkService = homeworkService;
+		this.userService = userService;
+		this.commentRepo = commentRepo;
+	}
+
+	@Override
+	public CommentServiceModel comment(CommentServiceModel comment, String homeworkId, String username) {
+		HomeworkServiceModel homework = this.homeworkService.findById(homeworkId);
+		System.out.println(homework);
+		System.out.println("Converted" + this.mapper.map(homework, JpaHomework.class));
+//		if (homework == null) {
+//			throw new EntityNotFoundException("A homework with this id does not exist");
+//		}
+//
+//		UserServiceModel user = this.userService.findByUsername(username);
+//		if (user == null) {
+//			throw new EntityNotFoundException("A user with this username does not exist");
+//		}
+//
+//		JpaUser author = this.mapper.map(user, JpaUser.class);
+//		JpaHomework homeWorkJpa = this.mapper.map(homework, JpaHomework.class);
+//		JpaComment commentToPersist = this.mapper.map(comment, JpaComment.class);
+//		commentToPersist.setAuthor(author);
+//		commentToPersist.setHomework(homeWorkJpa);
+//		System.out.println(commentToPersist);
+		return null;// this.mapper.map(this.commentRepo.save(commentToPersist),CommentServiceModel.class);
+	}
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{fragments/header::head('Patient Register')}" />
+<body>
+	<main class="main">
+		<th:block th:replace="~{fragments/navigation-bar::nav}" />
+		<div class="container-fluid">
+			<h2 class="text-center">Register Patient</h2>
+			<form class="mt-lg-5 w-15 h-50" enctype="multipart/form-data"
+				th:action="@{/patients/register}" th:object="${patient}"
+				method="POST">
+				<div class="row">
+					<div class="col col-md-12">
+						<div class="form-group">
+							<div class="label-holder d-flex justify-content-center">
+								<label class="text-center font-weight-bold" for="firstName">First
+									Name <input th:field="*{firstName}" type="text"
+									class="form-control" placeholder="First name" name="firstName"
+									id="firstName">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-md-12">
+						<div class="form-group">
+							<div class="label-holder d-flex justify-content-center">
+								<label class="text-center font-weight-bold" for="lastName">Last
+									Name <input th:field="*{lastName}" type="text"
+									class="form-control" placeholder="Last Name" name="lastName"
+									id="lastName">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 mt-5">
+						<input type="file" class="btn" name="profileImg" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-md-4"></div>
+					<div class="col col-md-4">
+						<div class="button-holder d-flex justify-content-center">
+							<input type="submit" class="btn btn-secondary" value="Register" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+	</main>
+</body>
+</html>

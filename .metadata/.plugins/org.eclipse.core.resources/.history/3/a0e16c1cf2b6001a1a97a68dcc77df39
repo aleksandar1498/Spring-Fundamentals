@@ -1,0 +1,11 @@
+package com.enjoyit.utils;
+
+import com.enjoyit.domain.dto.UserDTO;
+
+public class GenericListConverter<S, D> extends ListConverter<S, D> {
+
+    public GenericListConverter(final Class<?> destinationClass) {
+        super(destinationClass);
+    }
+
+}

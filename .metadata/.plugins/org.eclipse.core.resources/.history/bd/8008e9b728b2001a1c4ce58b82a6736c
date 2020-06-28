@@ -1,0 +1,20 @@
+package bg.softuni.andreys.service.impl;
+
+import bg.softuni.andreys.domain.service.UserServiceModel;
+import bg.softuni.andreys.service.AuthService;
+
+public class AuthServiceImpl implements AuthService {
+
+	@Override
+	public UserServiceModel login() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserServiceModel register() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

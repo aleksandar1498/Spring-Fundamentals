@@ -1,0 +1,30 @@
+
+j
+java:S1135A"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿ8š™é“£.H›¸RINFOZ
+CODE_SMELL
+a
+java:S3740,"/Provide the parametrized type for this generic.(Ì½¼¼ýÿÿÿÿH¢¸RMAJORZ
+CODE_SMELL
+o	java:S125V"<This block of commented-out lines of code should be removed.(ÀÓ†´8ïžÛÕ®.H•¾RMAJORZ
+CODE_SMELL
+h
+java:S3740)"/Provide the parametrized type for this generic.(£ °Ñûÿÿÿÿ8š™é“£.Hš¸RMAJORZ
+CODE_SMELL
+\
+java:S37407"/Provide the parametrized type for this generic.(ëé’ŒH£¸RMAJORZ
+CODE_SMELL
+_
+java:S1168l"+Return an empty collection instead of null.(¥¹ï8Áðï¹®.HúºRMAJORZ
+CODE_SMELL
+t	java:S125r"<This block of commented-out lines of code should be removed.(¯øÊŒúÿÿÿÿ8Áðï¹®.HüºRMAJORZ
+CODE_SMELL
+n	java:S125R"<This block of commented-out lines of code should be removed.(àüí8ïžÛÕ®.H”¾RMAJORZ
+CODE_SMELL
+t	java:S125\"<This block of commented-out lines of code should be removed.(ÈÂžÒûÿÿÿÿ8ïžÛÕ®.H—¾RMAJORZ
+CODE_SMELL
+m
+java:S2789Q"@Methods with an "Optional" return type should never return null.(¥¹ï8 ÇÛÕ®.H¡¾RMAJORZBUG
+n	java:S125o"<This block of commented-out lines of code should be removed.(Ó‹Œ[8Áðï¹®.HûºRMAJORZ
+CODE_SMELL
+o	java:S125Y"<This block of commented-out lines of code should be removed.(ÀÓ†´8ïžÛÕ®.H–¾RMAJORZ
+CODE_SMELL

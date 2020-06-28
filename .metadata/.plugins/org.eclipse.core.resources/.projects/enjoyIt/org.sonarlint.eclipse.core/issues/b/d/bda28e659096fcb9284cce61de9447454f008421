@@ -1,0 +1,15 @@
+
+À
+java:S1130I"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(åğšÀH¸²RMINORZ
+CODE_SMELL
+a
+java:S3740T"/Provide the parametrized type for this generic.(¼ë¤¸şÿÿÿÿH¹²RMAJORZ
+CODE_SMELL
+a
+java:S3740r"/Provide the parametrized type for this generic.(ÃÙÍùÿÿÿÿHº²RMAJORZ
+CODE_SMELL
+a
+java:S3740r"/Provide the parametrized type for this generic.(ÃÙÍùÿÿÿÿH»²RMAJORZ
+CODE_SMELL
+l	java:S106x"9Replace this use of System.out or System.err by a logger.(şĞÇë8Ì¢§ä¤.H¼²RMAJORZ
+CODE_SMELL

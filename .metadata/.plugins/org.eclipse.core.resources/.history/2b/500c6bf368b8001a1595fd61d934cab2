@@ -1,0 +1,5 @@
+package bg.softuni.shopping.common.utils;
+
+public class ObjectMapper {
+
+}

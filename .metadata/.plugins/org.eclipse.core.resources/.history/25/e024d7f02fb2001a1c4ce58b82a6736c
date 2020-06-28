@@ -1,0 +1,5 @@
+package bg.softuni.andreys.persistence;
+
+public class DataInitialization {
+
+}

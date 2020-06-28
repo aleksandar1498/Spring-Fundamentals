@@ -1,0 +1,41 @@
+package bg.softuni.andreys.domain.service;
+
+import javax.persistence.Column;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+
+public class CategoryServiceModel {
+	private CategoryType categoryType;
+	private String description;
+
+	public CategoryServiceModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public CategoryServiceModel(CategoryType categoryType, String description) {
+		this.categoryType = categoryType;
+		this.description = description;
+	}
+
+	public CategoryType getCategoryType() {
+		return categoryType;
+	}
+
+	public void setCategoryType(CategoryType categoryType) {
+		this.categoryType = categoryType;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "CategoryServiceModel [categoryType=" + categoryType + ", description=" + description + "]";
+	}
+
+}

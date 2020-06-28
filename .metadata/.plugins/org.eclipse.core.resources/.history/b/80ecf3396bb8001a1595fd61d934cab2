@@ -1,0 +1,15 @@
+package bg.softuni.shopping.domain.binding;
+
+public class RegisterUserModel {
+
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getConfirmPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

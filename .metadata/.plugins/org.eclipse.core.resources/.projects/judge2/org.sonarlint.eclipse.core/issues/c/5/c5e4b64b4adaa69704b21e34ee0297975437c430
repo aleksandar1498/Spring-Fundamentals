@@ -1,0 +1,9 @@
+
+“
+java:S2637"h"startedOn" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(Ýåî¹ÿÿÿÿÿH³‘RMINORZBUG
+m
+java:S1128"@Remove this unused import 'javax.validation.constraints.Future'.(þƒÒÓH´‘RMINORZ
+CODE_SMELL
+¶
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ýåî¹ÿÿÿÿÿHµ‘RCRITICALZ
+CODE_SMELL

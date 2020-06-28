@@ -1,0 +1,5 @@
+package bg.softuni.judge.domain.models.service;
+
+public class CommentServiceModel {
+
+}

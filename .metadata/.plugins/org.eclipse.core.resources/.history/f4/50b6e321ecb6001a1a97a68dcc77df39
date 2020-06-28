@@ -1,0 +1,19 @@
+    package com.enjoyit.utils;
+
+import java.util.ArrayList;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+
+public abstract class ListConverter<S, D> implements Converter<ArrayList<S>, ArrayList<D>> {
+
+    @Override
+    public ArrayList<D> convert(final MappingContext<ArrayList<S>, ArrayList<D>> context) {
+        System.out.println(context.getDestination() +" destination");
+        if (context.getSource() == null || context.getDestination() == null) {
+            return new ArrayList<D>();
+        }
+        return ObjectMapper.mapAll(context.getSource(), (Class<D>) context.getDestination().getClass());
+    }
+
+}

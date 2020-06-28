@@ -1,0 +1,5 @@
+package bg.softuni.shopping.persistence.entities;
+
+public class JpaUser extends BaseEntity {
+
+}

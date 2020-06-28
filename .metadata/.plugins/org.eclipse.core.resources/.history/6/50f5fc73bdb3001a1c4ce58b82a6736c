@@ -1,0 +1,67 @@
+package bg.softuni.andreys.web.controllers;
+
+import javax.validation.Valid;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import bg.softuni.andreys.domain.binding.AddItemModel;
+import bg.softuni.andreys.domain.service.ItemServiceModel;
+import bg.softuni.andreys.service.ItemService;
+
+@Controller
+@RequestMapping("/items")
+public class ItemController {
+
+	private ModelMapper mapper;
+	private ItemService itemService;
+
+	@Autowired
+	public ItemController(ModelMapper mapper, ItemService itemService) {
+		this.mapper = mapper;
+		this.itemService = itemService;
+	}
+
+	@GetMapping("add")
+	public String showAddItemForm(@ModelAttribute("item") AddItemModel item) {
+		return "add-item";
+	}
+
+	@PostMapping("add")
+	public String addItem(@Valid @ModelAttribute("item") AddItemModel item, BindingResult binding) {
+		if (binding.hasErrors()) {
+			return "add-item";
+		}
+
+		try {
+			this.itemService.create(this.mapper.map(item, ItemServiceModel.class));
+		} catch (Exception e) {
+			System.out.println(e);
+			binding.reject("failure", e.getMessage());
+			return "add-item";
+		}
+		return "add-item";
+	}
+
+	@GetMapping("/{name}")
+	public ModelAndView viewItemDetails(@PathVariable("name") String name, ModelAndView mView) {
+		mView.addObject("item", this.itemService.findByName(name));
+		mView.setViewName("details-item");
+		return mView;
+	}
+
+	@DeleteMapping("/{name}")
+	public String deleteItem(@PathVariable("name") String name) {
+		this.itemService.removeByName(name);
+		return "redirect:/home";
+	}
+}

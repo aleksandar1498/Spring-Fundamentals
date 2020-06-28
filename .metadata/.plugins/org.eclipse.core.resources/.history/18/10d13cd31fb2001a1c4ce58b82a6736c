@@ -1,0 +1,38 @@
+package bg.softuni.andreys.persistence.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+import bg.softuni.andreys.persistence.User;
+
+@Entity
+@Table(name = "users",uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+public class JpaUser extends BaseEntity implements User {
+
+	private String username;
+	private String password;
+	private String email;
+	private String budget;
+
+	@Override
+	public String getUsername() {
+		return this.username;
+	}
+
+	@Override
+	public String getPassword() {
+		return this.password;
+	}
+
+	@Override
+	public String getEmail() {
+		return this.email;
+	}
+
+	@Override
+	public String getBudget() {
+		return this.budget;
+	}
+
+}

@@ -1,0 +1,9 @@
+
+}
+java:S1192&"FDefine a constant instead of duplicating this literal "login" 3 times.(Íı‡Ç8ó€€å¬.H†œRCRITICALZ
+CODE_SMELL
+o
+java:S24410"BMake "LoggedInUser" serializable or don't store it in the session.(£Õô8øĞşä¬.H…œRMAJORZBUG
+…
+java:S1192:"IDefine a constant instead of duplicating this literal "register" 3 times.(ã‹¥œúÿÿÿÿ8ÓØôä¬.Hş›RCRITICALZ
+CODE_SMELL

@@ -1,0 +1,5 @@
+package bg.softuni.shopping.web.controllers;
+
+public class AuthController {
+
+}

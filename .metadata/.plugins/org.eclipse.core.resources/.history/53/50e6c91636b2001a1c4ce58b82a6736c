@@ -1,0 +1,61 @@
+package bg.softuni.andreys.service.impl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.andreys.domain.service.ItemServiceModel;
+import bg.softuni.andreys.persistence.entities.JpaCategory;
+import bg.softuni.andreys.persistence.entities.JpaItem;
+import bg.softuni.andreys.persistence.repositories.CategoryRepository;
+import bg.softuni.andreys.persistence.repositories.ItemRepository;
+import bg.softuni.andreys.service.ItemService;
+
+@Service
+public class ItemServiceImpl implements ItemService{
+
+	private ModelMapper mapper;
+	private ItemRepository itemRepo;
+	private CategoryRepository categoryRepo;
+	@Autowired
+	public ItemServiceImpl(ModelMapper mapper, ItemRepository itemRepo,CategoryRepository categoryRepo) {
+		this.mapper = mapper;
+		this.itemRepo = itemRepo;
+		this.categoryRepo = categoryRepo;
+	}
+
+	@Override
+	public ItemServiceModel create(ItemServiceModel item) {
+		if(this.itemRepo.findByName(item.getName()).isPresent()) {
+			throw new IllegalArgumentException("Item already exists");
+		}
+		JpaCategory category = this.categoryRepo.findByCategoryType(item.getCategory()).orElseThrow(() -> {
+			return new IllegalArgumentException("This selected category does not exists");
+		});
+		
+		JpaItem toSave = this.mapper.map(item,JpaItem.class);
+		toSave.setCategory(category);
+		
+		return this.mapper.map(this.itemRepo.save(toSave),ItemServiceModel.class);
+	}
+
+	@Override
+	public ItemServiceModel remove(String itemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ItemServiceModel find(String itemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ItemServiceModel> findAll() {
+		return this.itemRepo.findAll().stream().map(i -> this.mapper.map(i,ItemServiceModel.class)).collect(Collectors.toList());
+	}
+
+}

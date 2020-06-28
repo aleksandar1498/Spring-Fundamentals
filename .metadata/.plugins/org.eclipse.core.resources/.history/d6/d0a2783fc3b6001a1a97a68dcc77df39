@@ -1,0 +1,26 @@
+package com.enjoyit.domain.dto;
+
+public class EventUserDTO {
+    private UserDTO user;
+    private EventDTO event;
+
+    public EventUserDTO() {
+        // TODO Auto-generated constructor stub
+    }
+
+    public EventDTO getEvent() {
+        return event;
+    }
+
+    public UserDTO getUser() {
+        return user;
+    }
+
+    public void setEvent(final EventDTO event) {
+        this.event = event;    }
+
+    public void setUser(final UserDTO user) {
+        this.user = user
+    }
+
+}

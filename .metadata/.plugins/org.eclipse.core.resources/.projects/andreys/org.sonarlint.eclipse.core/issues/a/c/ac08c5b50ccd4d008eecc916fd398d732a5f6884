@@ -1,0 +1,32 @@
+
+‰
+java:S1128"PRemove this unused import 'bg.softuni.andreys.persistence.entities.JpaCategory'.(¦öŒÍùÿÿÿÿ8ïÚñæ¬.HŠRMINORZ
+CODE_SMELL
+q
+java:S1128"8Remove this unused import 'javax.persistence.ManyToOne'.(ÇÑ²øÿÿÿÿ8ïÚñæ¬.H…RMINORZ
+CODE_SMELL
+h
+java:S1128"5Remove this unused import 'javax.persistence.Column'.(ìûæH8ïÚñæ¬.H„RMINORZ
+CODE_SMELL
+r
+java:S1128"9Remove this unused import 'javax.persistence.Enumerated'.(¡ùşßûÿÿÿÿ8ïÚñæ¬.HˆRMINORZ
+CODE_SMELL
+}
+java:S1128"DRemove this unused import 'bg.softuni.andreys.persistence.Category'.(Û¸œ‡şÿÿÿÿ8ïÚñæ¬.H‰RMINORZ
+CODE_SMELL
+l
+java:S1128"8Remove this unused import 'javax.persistence.FetchType'.(‡¯¿8ïÚñæ¬.H‡RMINORZ
+CODE_SMELL
+j
+java:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8öÁõæ¬.H¦RINFOZ
+CODE_SMELL
+p
+java:S1128"7Remove this unused import 'javax.persistence.EnumType'.(ˆ«¨–üÿÿÿÿ8ïÚñæ¬.HƒRMINORZ
+CODE_SMELL
+n
+java:S1128":Remove this unused import 'javax.persistence.CascadeType'.( ì¤Ê8ïÚñæ¬.H†RMINORZ
+CODE_SMELL
+}
+java:S1128
+"IRemove this unused import 'bg.softuni.andreys.common.enums.CategoryType'.(Ğ°8ä‡©¹­.HÊRMINORZ
+CODE_SMELL

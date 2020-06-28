@@ -1,0 +1,9 @@
+package bg.softuni.andreys.web.controllers;
+
+public class AuthController {
+
+	public AuthController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

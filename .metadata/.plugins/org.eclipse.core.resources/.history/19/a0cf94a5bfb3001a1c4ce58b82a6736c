@@ -1,0 +1,88 @@
+package bg.softuni.andreys.domain.binding;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.common.enums.Gender;
+import bg.softuni.andreys.persistence.Category;
+
+public class AddItemModel {
+	
+	@Size(min = 2,message = "Name must be at least 2 chars")
+	private String name;
+	
+	@Size(min = 3,message = "Name must be at least 2 chars")
+	private String description;
+	
+	@Min(value = 0,message = "Price should be positive")
+	@NotNull(message = "Price cannot be null")
+	private Double price;
+
+	@NotNull(message = "Category cannot be empty")
+	private CategoryType category;
+
+	@NotNull(message = "Gender cannot be empty")
+	private Gender gender;
+
+	public AddItemModel() {
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Double getPrice() {
+		return price;
+	}
+
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+
+	public CategoryType getCategory() {
+		return category;
+	}
+
+	public void setCategory(CategoryType category) {
+		this.category = category;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
+	@Override
+	public String toString() {
+		return "AddItemModel [name=" + name + ", description=" + description + ", price=" + price + ", category="
+				+ category + ", gender=" + gender + "]";
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+
+p	java:S106"9Replace this use of System.out or System.err by a logger.(šÿíÉùÿÿÿÿ8ø·¶Ÿª.H¨wRMAJORZ
+CODE_SMELL
+b
+java:S1068"*Remove this unused "mapper" private field.(„¶¹˜ÿÿÿÿÿ8º’çö©.H©wRMAJORZ
+CODE_SMELL
+ƒ
+java:S1128"PRemove this unused import 'bg.kin4you.management.model.binding.VisitationModel'.(ë¿ýÇ8ä¼¤Ÿª.HªwRMINORZ
+CODE_SMELL
+†
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8º’çö©.H«wRMINORZ
+CODE_SMELL

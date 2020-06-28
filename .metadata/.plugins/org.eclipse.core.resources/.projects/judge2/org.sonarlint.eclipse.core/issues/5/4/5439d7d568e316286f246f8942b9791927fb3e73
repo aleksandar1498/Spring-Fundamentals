@@ -1,0 +1,31 @@
+
+‰
+java:S1128"URemove this unused import 'bg.softuni.judge.persistence.repositories.UserRepository'.(Í†—Ò8Ø¾ñî«.HšœRMINORZ
+CODE_SMELL
+n
+java:S1128":Remove this unused import 'net.bytebuddy.asm.Advice.This'.(ÁÔàå8ÄÑ­ğ«.H›œRMINORZ
+CODE_SMELL
+s
+java:S1117="?Rename "userService" which hides the field declared at line 33.(¢ŒÇ€8áÑ†ï«.HœœRMAJORZ
+CODE_SMELL
+q
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8øìÛø«.HœRMINORZ
+CODE_SMELL
+j
+java:S1128	"6Remove this unused import 'org.modelmapper.Converter'.(ŞÃ­È8“ßõï«.HœRMINORZ
+CODE_SMELL
+‡
+java:S16026"SRemove useless curly braces around statement and then remove useless return keyword(ŒŒ÷Ö8šö§Ÿ§.HŸœRMINORZ
+CODE_SMELL
+c
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8øìÛø«.H œRMINORZ
+CODE_SMELL
+s
+java:S1128"?Remove this unused import 'org.modelmapper.spi.MappingContext'.(Û‘¨8“ßõï«.H¡œRMINORZ
+CODE_SMELL
+w
+java:S1128">Remove this unused import 'bg.softuni.judge.persistence.Role'.(áà´öøÿÿÿÿ8øìÛø«.H¢œRMINORZ
+CODE_SMELL
+Œ
+java:S1602?"SRemove useless curly braces around statement and then remove useless return keyword(ÊŞ¡Ùıÿÿÿÿ8ê¾ñî«.H£œRMINORZ
+CODE_SMELL

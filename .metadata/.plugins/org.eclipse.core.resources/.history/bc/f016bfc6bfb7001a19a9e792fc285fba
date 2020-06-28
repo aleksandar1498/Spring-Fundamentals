@@ -1,0 +1,21 @@
+package bg.softuni.judge.utils;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+import org.springframework.stereotype.Component;
+
+import bg.softuni.judge.domain.models.service.HomeworkServiceModel;
+import bg.softuni.judge.persistence.entities.JpaHomework;
+
+@Component
+public class HomeworkServiceModelToJpa implements Converter<HomeworkServiceModel, JpaHomework> {
+	
+	@Override
+	public JpaHomework convert(MappingContext<HomeworkServiceModel, JpaHomework> context) {
+		if(context.getSource() == null) {
+			return null;
+		}
+		return null;
+	}
+
+}

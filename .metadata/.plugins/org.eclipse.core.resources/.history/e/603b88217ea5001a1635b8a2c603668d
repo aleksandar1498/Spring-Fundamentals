@@ -1,0 +1,82 @@
+package bg.softuni.dealer.persistence.entities;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import bg.softuni.dealer.persistence.Brand;
+import bg.softuni.dealer.persistence.Model;
+
+@Entity
+@Table(name = "brands")
+public class JpaBrand  implements Brand {
+	private String id;
+
+	@Id
+	@GeneratedValue(generator = "UUID")
+	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	private String name;
+	private LocalDateTime created;
+	private LocalDateTime modified;
+	private List<Model> models;
+
+	public JpaBrand() {
+	}
+
+	@Column
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Column
+	@Override
+	public LocalDateTime getCreated() {
+		return created;
+	}
+
+	@Column
+	@Override
+	public LocalDateTime getModified() {
+		return modified;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setCreated(LocalDateTime created) {
+		this.created = created;
+	}
+
+	public void setModified(LocalDateTime modified) {
+		this.modified = modified;
+	}
+
+	@Override
+	@OneToMany(mappedBy = "brand", targetEntity = JpaModel.class)
+	public List<Model> getModels() {
+		return models;
+	}
+
+	public void setModels(List<Model> models) {
+		this.models = models;
+	}
+
+}

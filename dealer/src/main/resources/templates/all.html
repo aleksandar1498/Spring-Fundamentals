@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>West Compass</title>
+<link rel="stylesheet" href="/css/reset-css.css" />
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+	<main>
+		<nav class="navbar navbar-expand-lg navbar-background">
+			<a class="nav-link text-white active h5" href="/">Home</a> <a
+				class="nav-link text-white active h5" href="/users/register">Register
+				Seller</a>
+			<div class="collapse navbar-collapse d-flex justify-content-end">
+				<ul class="navbar-nav row">
+					<li class="nav-item col-md-3"><a
+						class="nav-link text-white active font-weight-bold" href="/">Add
+							Brand</a></li>
+					<li class="nav-item col-md-3"><a
+						class="nav-link text-white active font-weight-bold" href="/">Add
+							Model</a></li>
+					<li class="nav-item col-md-3"><a
+						class="nav-link text-white active font-weight-bold" href="/">Add
+							Offer</a></li>
+					<li class="nav-item col-md-3"><a
+						class="nav-link text-white active font-weight-bold" href="/">All
+							Offers</a></li>
+
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<h2 class="text-center text-white mt-5">West Compass Offers</h2>
+			<hr style="width: 50%" />
+			<div class='row mb-4 d-flex justify-content-around'>
+
+				<div th:each="o : ${offers}" th:object="${o}"
+					class="col-md-4 d-flex flex-column bg-text mb-3">
+					<h2 th:text="|Car brand: *{model.brand.name}"></h2>
+					<h4 th:text="|Model:: *{model.name}"></h4>
+					<h4 th:text="|Year: *{year}"></h4>
+					<h4 th:text="|Engine: *{engine}"></h4>
+					<h4>
+						<a class="btn-block" th:href="@{/offers/details/{id}(id=*{id})}">Details</a>
+					</h4>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+package com.enjoyit.utils;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+
+public class EntityToDTOConverter<S, D> implements Converter<S, D> {
+
+
+    @Override
+    public D convert(final MappingContext<S, D> context) {
+        if (context.getSource() == null || context.getDestination() == null) {
+            return null;
+        }
+
+        return (D) ObjectMapper.map(context.getSource(), context.getDestination().getClass());
+    }
+
+}

@@ -1,0 +1,5 @@
+package bg.softuni.shopping.web.filters;
+
+public class BaseAuthorizationFilter {
+
+}

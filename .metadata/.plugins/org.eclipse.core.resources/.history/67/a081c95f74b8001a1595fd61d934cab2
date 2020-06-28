@@ -1,0 +1,7 @@
+package bg.softuni.shopping.service;
+
+import bg.softuni.shopping.domain.service.ProductServiceModel;
+
+public interface ProductService {
+	ProductServiceModel add(ProductServiceModel product);
+}

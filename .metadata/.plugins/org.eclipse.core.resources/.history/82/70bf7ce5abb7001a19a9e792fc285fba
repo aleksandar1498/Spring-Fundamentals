@@ -1,0 +1,77 @@
+package bg.softuni.judge.services.impl;
+
+import java.time.LocalDateTime;
+import java.util.Random;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.modelmapper.Converter;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.PropertyMap;
+import org.modelmapper.spi.MappingContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.judge.domain.models.binding.LoggedInUser;
+import bg.softuni.judge.domain.models.service.CommentServiceModel;
+import bg.softuni.judge.domain.models.service.HomeworkServiceModel;
+import bg.softuni.judge.domain.models.service.UserServiceModel;
+import bg.softuni.judge.persistence.entities.JpaComment;
+import bg.softuni.judge.persistence.entities.JpaExercise;
+import bg.softuni.judge.persistence.entities.JpaHomework;
+import bg.softuni.judge.persistence.entities.JpaUser;
+import bg.softuni.judge.persistence.repositories.HomeworkRepository;
+import bg.softuni.judge.services.HomeworkService;
+import bg.softuni.judge.services.UserService;
+import bg.softuni.judge.utils.RolesEnumToRoleServiceModelConverter;
+
+@Service
+public class HomeworkServiceImpl implements HomeworkService {
+
+	private HomeworkRepository homeRepo;
+	private UserService userService;
+	private ModelMapper mapper;
+
+	@Autowired
+	public HomeworkServiceImpl(HomeworkRepository homeRepo, ModelMapper mapper,UserService userService) {
+		this.homeRepo = homeRepo;
+		this.mapper = mapper;
+		this.userService = userService;
+	}
+
+	@Override
+	public HomeworkServiceModel create(HomeworkServiceModel homework) {
+		JpaHomework homeworkToSave = this.mapper.map(homework, JpaHomework.class);
+		homeworkToSave.setAuthor(this.mapper.map(homework.getAuthor(), JpaUser.class));
+		homeworkToSave.setExercise(this.mapper.map(homework.getExercise(), JpaExercise.class));
+		return this.mapper.map(this.homeRepo.save(homeworkToSave), HomeworkServiceModel.class);
+	}
+
+	@Override
+	public String getRandomId() {
+		return this.homeRepo.findAll().get((int) (Math.random() * this.homeRepo.count())).getId();
+	}
+
+	@Override
+	public HomeworkServiceModel comment(CommentServiceModel comment, String homeworkId,String username) {
+		JpaHomework homework = this.homeRepo.findById(homeworkId).orElseThrow(() ->{
+			return new EntityNotFoundException("A homework with this id does not exist");
+		});
+		
+		UserServiceModel user = this.userService.findByUsername(username);
+		if(user == null) {
+			throw new EntityNotFoundException("A user with this username does not exist");
+		}
+		
+		JpaUser author = this.mapper.map(user,JpaUser.class);
+		System.out.println(author);
+		JpaComment commentToPersist = this.mapper.map(comment,JpaComment.class);
+		commentToPersist.setAuthor(author);
+		commentToPersist.setHomework(homework);
+		System.out.println(commentToPersist.toString());
+		
+		System.out.println(commentToPersist.toString());
+		return null;
+	}
+
+}

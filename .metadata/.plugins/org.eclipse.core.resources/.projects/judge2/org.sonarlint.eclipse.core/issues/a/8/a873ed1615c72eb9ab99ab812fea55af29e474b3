@@ -1,0 +1,10 @@
+
+u
+java:S1128"ARemove this unused import 'org.modelmapper.spi.MatchingStrategy'.(ÅìÀ8Ğåà˜¬.H¯—RMINORZ
+CODE_SMELL
+’
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¤ØÜéüÿÿÿÿ8æ¶ê½«.H¬—RMINORZ
+CODE_SMELL
+’
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿Ÿ«·úÿÿÿÿ8Ñ…ÑÄ«.Hª—RMINORZ
+CODE_SMELL

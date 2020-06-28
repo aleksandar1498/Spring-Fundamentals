@@ -1,0 +1,9 @@
+package bg.softuni.andreys.persistence.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import bg.softuni.andreys.persistence.entities.JpaItem;
+
+public interface ItemRepository extends JpaRepository<JpaItem, String> {
+
+}

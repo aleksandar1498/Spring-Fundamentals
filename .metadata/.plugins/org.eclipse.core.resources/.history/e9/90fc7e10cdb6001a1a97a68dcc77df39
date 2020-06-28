@@ -1,0 +1,58 @@
+package com.enjoyit.persistence;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import com.enjoyit.persistence.entities.JpaUserJoinEvent;
+
+public interface Event {
+    /**
+     * @return
+     */
+    Boolean getCancelled();
+    /**
+     * @return
+     */
+    String getDescription();
+
+    /**
+     * @return
+     */
+    LocalDateTime getEndDate();
+    /**
+     * @return
+     */
+    Integer getId();
+
+    /**
+     * @return
+     */
+    List<EventUser> getInterestedUsers();
+    /**
+     * @return
+     */
+    List<JpaUserJoinEvent> getJoinedUsers();
+    /**
+     * @return
+     */
+    String getLocation();
+
+    /**
+     * @return
+     */
+    User getOwner();
+
+    /**
+     * @return
+     */
+    LocalDateTime getStartDate();
+
+    /**
+     * @return
+     */
+    String getTitle();
+    /**
+     * @return
+     */
+    void setCancelled();
+}

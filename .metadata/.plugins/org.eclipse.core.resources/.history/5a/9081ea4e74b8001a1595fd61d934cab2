@@ -1,0 +1,29 @@
+package bg.softuni.shopping.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.shopping.common.utils.ObjectMapper;
+import bg.softuni.shopping.domain.service.ProductServiceModel;
+import bg.softuni.shopping.persistence.entities.JpaProduct;
+import bg.softuni.shopping.persistence.repositories.ProductRepository;
+import bg.softuni.shopping.service.ProductService;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+	private ProductRepository productRepo;
+	
+	@Autowired
+	public ProductServiceImpl(ProductRepository productRepo) {
+		this.productRepo = productRepo;
+	}
+
+
+	@Override
+	public ProductServiceModel add(ProductServiceModel product) {
+		JpaProduct productToSave = ObjectMapper.map(product, JpaProduct.class);
+		System.out.println(productToSave);
+		return null;
+	}
+
+}

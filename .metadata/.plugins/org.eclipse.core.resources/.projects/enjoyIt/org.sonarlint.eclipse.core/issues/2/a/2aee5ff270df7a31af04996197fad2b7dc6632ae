@@ -1,0 +1,15 @@
+
+l	java:S106"9Replace this use of System.out or System.err by a logger.(¸¼û¨8À¯İ®.H§ÁRMAJORZ
+CODE_SMELL
+e
+java:S1135"2Complete the task associated to this TODO comment.(Òî…¯8ª¦™Ø®.HóÀRINFOZ
+CODE_SMELL
+
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(œàÛ—8†•ûÔ®.HŠ¼RMINORZ
+CODE_SMELL
+‡
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(ÍçƒÇ8îİØ®.HîÀRMINORZ
+CODE_SMELL
+j
+java:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿ8çÏ¯Ş®.HÙÃRINFOZ
+CODE_SMELL

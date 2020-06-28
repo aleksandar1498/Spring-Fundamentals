@@ -1,0 +1,9 @@
+package bg.softuni.andreys.domain.binding;
+
+public class RegisterBindingModel {
+
+	public RegisterBindingModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

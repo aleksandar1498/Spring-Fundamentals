@@ -1,0 +1,9 @@
+
+c
+java:S1135"2Complete the task associated to this TODO comment.(ƒŠ® úÿÿÿÿHïšRINFOZ
+CODE_SMELL
+—
+java:S2637"e"budget" is marked "javax.validation.constraints.NotNull" but is not initialized in this constructor.(é»–©üÿÿÿÿ8ð§šå¬.HŽœRMINORZBUG
+h
+java:S1128"5Remove this unused import 'javax.persistence.Column'.(ìûæH8ÚÆúã¬.H÷šRMINORZ
+CODE_SMELL

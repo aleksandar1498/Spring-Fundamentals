@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{fragments/head::head}"></th:block>
+<body>
+	<th:block th:replace="~{fragments/navigation::nav}"></th:block>
+	<main>
+		<h1 class="text-center mt-2">
+			<span class="badge badge-pill badge-dark">Add Item</span>
+		</h1>
+		<hr class="hr-3" />
+		<form class="mx-auto w-25 bg-dark p-3 rounded text-center"
+			th:action="@{/items/add}" th:method="POST" th:object="${item}">
+			<div class="form-group">
+				<div class="text-white label-holder d-flex justify-content-center">
+					<label for="name" class="h4 mb-2">Name</label>
+				</div>
+				<input th:field="*{name}" type="text" class="form-control" id="name"
+					name="name" /> <small class="text-danger">Incorrect name!</small>
+			</div>
+			<div class="form-group">
+				<div class="text-white label-holder d-flex justify-content-center">
+					<label for="description" class="h4 mb-2">Description</label>
+				</div>
+				<input th:field="*{description}" type="text" class="form-control"
+					id="description" name="description" /> <small class="text-danger">Incorrect
+					description</small>
+			</div>
+			<div class="form-group">
+				<div class="text-white label-holder d-flex justify-content-center">
+					<label for="category" class="h4 mb-2">Category</label>
+				</div>
+				<select th:field="*{category}" class="browser-default custom-select"
+					id="category" name="category">
+					<option th:value="''">Select gender</option>
+					<option
+						th:each="c : ${T(bg.softuni.andreys.common.enums.CategoryType).values()}"
+						th:value="${c}" th:text="${c}"></option>
+				</select>
+			</div>
+			<div class="form-group">
+				<div class="text-white label-holder d-flex justify-content-center">
+					<label for="gender" class="h4 mb-2">Gender</label>
+				</div>
+				<select th:field="*{gender}" class="browser-default custom-select"
+					id="gender" name="gender">
+					<option value="">Select gender</option>
+					<option
+						th:each="g : ${T(bg.softuni.andreys.common.enums.Gender).values()}"
+						th:value="${g}"
+						th:text="${g}"></option>
+
+				</select>
+			</div>
+			<div class="form-group">
+				<div class="text-white label-holder d-flex justify-content-center">
+					<label for="price" class="h4 mb-2">Price</label>
+				</div>
+				<input type="number" class="form-control" id="price" name="price" step="0.50"/>
+				<small class="text-danger">Incorrect price!</small>
+			</div>
+			<div class="button-holder d-flex justify-content-center">
+				<button type="submit" class="btn btn-secondary text-white mb-3">Add
+					Item</button>
+			</div>
+		</form>
+	</main>
+	<th:block th:replace="~{fragments/footer::footer}"></th:block>
+
+</body>
+</html>

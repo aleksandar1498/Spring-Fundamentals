@@ -1,0 +1,18 @@
+package com.enjoyit.domain.dto;
+
+public class JoinEventDTO {
+    private EventDTO event;
+
+    public JoinEventDTO() {
+        // TODO Auto-generated constructor stub
+    }
+    
+    public EventDTO getEvent() {
+        return event;
+    }
+
+    public void setEvent(EventDTO event) {
+        this.event = event;
+    }
+    
+}

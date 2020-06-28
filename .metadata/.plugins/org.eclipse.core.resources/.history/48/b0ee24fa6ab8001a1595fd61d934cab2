@@ -1,0 +1,9 @@
+package bg.softuni.shopping.service;
+
+import bg.softuni.shopping.domain.service.UserServiceModel;
+
+public interface UserService {
+
+	UserServiceModel login(UserServiceModel map);
+
+}

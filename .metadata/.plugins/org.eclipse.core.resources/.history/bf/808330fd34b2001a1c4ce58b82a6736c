@@ -1,0 +1,43 @@
+package bg.softuni.andreys.service.impl;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.andreys.domain.service.ItemServiceModel;
+import bg.softuni.andreys.persistence.entities.JpaItem;
+import bg.softuni.andreys.persistence.repositories.ItemRepository;
+import bg.softuni.andreys.service.ItemService;
+
+@Service
+public class ItemServiceImpl implements ItemService{
+
+	private ModelMapper mapper;
+	private ItemRepository itemRepo;
+	
+	@Autowired
+	public ItemServiceImpl(ModelMapper mapper, ItemRepository itemRepo) {
+		this.mapper = mapper;
+		this.itemRepo = itemRepo;
+	}
+
+	@Override
+	public ItemServiceModel create(ItemServiceModel item) {
+		JpaItem toSave = this.mapper.map(item,JpaItem.class);
+		System.out.println("TOSAVE "+toSave.toString());
+		return null;
+	}
+
+	@Override
+	public ItemServiceModel remove(String itemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ItemServiceModel find(String itemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

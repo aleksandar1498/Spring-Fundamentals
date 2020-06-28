@@ -1,0 +1,9 @@
+package bg.softuni.andreys.domain.binding;
+
+public class LoginBindingModel {
+
+	public LoginBindingModel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,75 @@
+package bg.softuni.andreys.web.controllers;
+
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import bg.softuni.andreys.domain.binding.LoginBindingModel;
+import bg.softuni.andreys.domain.binding.RegisterBindingModel;
+import bg.softuni.andreys.domain.service.LoggedInUser;
+import bg.softuni.andreys.domain.service.UserRegisterServiceModel;
+import bg.softuni.andreys.domain.service.UserServiceModel;
+import bg.softuni.andreys.service.AuthService;
+
+@Controller
+@RequestMapping("/users")
+public class AuthController {
+
+	private ModelMapper mapper;
+	private AuthService authService;
+
+	@Autowired
+	public AuthController(ModelMapper mapper, AuthService authService) {
+		this.mapper = mapper;
+		this.authService = authService;
+	}
+
+	@GetMapping("login")
+	public String showLoginForm(@ModelAttribute("user") LoginBindingModel user) {
+		return "login";
+	}
+	
+	@PostMapping("login")
+	public String loginUser(@Valid @ModelAttribute("user") LoginBindingModel user, BindingResult binding, HttpSession session) {
+		if (binding.hasErrors()) {
+			return "login";
+		}
+		try {
+			UserServiceModel logged = this.authService.register(this.mapper.map(user, UserRegisterServiceModel.class));
+			session.setAttribute("user",this.mapper.map(logged,LoggedInUser.class));
+		} catch (Exception e) {
+			System.out.println(e);
+			binding.reject("failure", e.getMessage());
+			return "login";
+		}
+		return "redirect:/home";
+	}
+
+	@GetMapping("register")
+	public String showRegisterForm(@ModelAttribute("user") RegisterBindingModel user) {
+		return "register";
+	}
+
+	@PostMapping("register")
+	public String registerUser(@Valid @ModelAttribute("user") RegisterBindingModel user, BindingResult binding) {
+		if (binding.hasErrors()) {
+			return "register";
+		}
+		try {
+			this.authService.register(this.mapper.map(user, UserRegisterServiceModel.class));
+		} catch (Exception e) {
+			binding.reject("failure", e.getMessage());
+			return "register";
+		}
+		return "redirect:login";
+	}
+
+}

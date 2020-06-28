@@ -1,0 +1,34 @@
+package bg.softuni.andreys.service.impl;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.andreys.domain.service.UserServiceModel;
+import bg.softuni.andreys.persistence.repositories.UserRepository;
+import bg.softuni.andreys.service.AuthService;
+
+@Service
+public class AuthServiceImpl implements AuthService {
+
+	private ModelMapper mapper;
+	private UserRepository userRepo;
+	
+	
+	public AuthServiceImpl(ModelMapper mapper, UserRepository userRepo) {
+		this.mapper = mapper;
+		this.userRepo = userRepo;
+	}
+
+	@Override
+	public UserServiceModel login(UserServiceModel loginUser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserServiceModel register(UserServiceModel registerUser) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

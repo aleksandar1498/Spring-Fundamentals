@@ -1,0 +1,20 @@
+package com.enjoyit.utils;
+
+import org.modelmapper.Converters.Converter;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.enjoyit.domain.dto.EventDTO;
+import com.enjoyit.persistence.Event;
+import com.enjoyit.persistence.repositories.EventRepository;
+
+public class EventDTOtoEntityCoverter implements Converter<EventDTO, Event> {
+
+    @Autowired
+    private EventRepository eventRepo;
+
+    @Override
+    public Event convert(EventDTO source) {
+        return this.eventRepo.findById(source.getId()).orElse(null);
+    }
+
+}

@@ -1,0 +1,5 @@
+package bg.softuni.shopping.service.impl;
+
+public class UserServiceImpl {
+
+}

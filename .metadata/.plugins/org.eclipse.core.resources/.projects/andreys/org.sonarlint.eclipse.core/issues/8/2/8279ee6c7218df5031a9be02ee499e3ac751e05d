@@ -1,0 +1,10 @@
+
+|
+java:S1128"IRemove this unused import 'org.springframework.format.FormatterRegistry'.(ÊÈÌ8šÞ¤¹­.H±žRMINORZ
+CODE_SMELL
+Œ
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8šÞ¤¹­.H²žRMINORZ
+CODE_SMELL
+…
+java:S1128"LRemove this unused import 'bg.softuni.andreys.utils.EnumToServiceConverter'.(›äØÑþÿÿÿÿ8šÞ¤¹­.H³žRMINORZ
+CODE_SMELL

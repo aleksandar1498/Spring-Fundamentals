@@ -1,0 +1,29 @@
+package bg.softuni.shopping.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import bg.softuni.shopping.common.utils.ObjectMapper;
+import bg.softuni.shopping.domain.service.CategoryServiceModel;
+import bg.softuni.shopping.persistence.entities.JpaCategory;
+import bg.softuni.shopping.persistence.repositories.CategoryRepository;
+import bg.softuni.shopping.service.CategoryService;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+	private CategoryRepository categoryRepo;
+	
+	@Autowired
+	public CategoryServiceImpl(CategoryRepository categoryRepo) {
+		this.categoryRepo = categoryRepo;
+	}
+
+
+	@Override
+	public CategoryServiceModel create(CategoryServiceModel category) {
+		JpaCategory categoryToSave = ObjectMapper.map(category,JpaCategory.class);
+		System.out.println(categoryToSave);
+		return null;
+	}
+
+}

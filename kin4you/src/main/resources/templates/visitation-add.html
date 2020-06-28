@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:replace="~{fragments/header::head('Visitation Perform')}"/>
+<body>
+	<main class="main">
+		<th:block th:replace="~{fragments/navigation-bar::nav}" />
+		<div class="container-fluid" th:object="${visitation}">
+			<h2 class="text-center"
+				th:text="|Visitation for *{patient.firstName} *{patient.lastName}|"></h2>
+			<form class="mt-lg-5"
+				th:action="@{/patients/{id}/visitation(id=*{patient.id})}"
+				method="POST">
+
+				<div class="row">
+					<div class="col col-md-4"></div>
+					<div class="col-md-4">
+						<label class="text-center font-weight-bold" for="description">Description
+							<textarea th:field="*{description}" type="textarea"
+								class="form-control" name="description" id="description"
+								rows="15" cols="100%" placeholder="Description"></textarea>
+						</label>
+					</div>
+				</div>
+				<input type="hidden" th:field="*{date}" /> <input type="hidden"
+					th:field="*{patient.id}" />
+
+				<div class="row">
+					<div class="col col-md-4"></div>
+					<div class="col col-md-4">
+						<div class="button-holder d-flex justify-content-center">
+							<input type="submit" class="btn btn-secondary"
+								value="Complete Visitation" />
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</main>
+</body>
+</html>

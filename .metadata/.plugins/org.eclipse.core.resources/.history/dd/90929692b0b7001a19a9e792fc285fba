@@ -1,0 +1,26 @@
+package bg.softuni.judge.web.controllers;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import bg.softuni.judge.services.CommentService;
+
+@Controller
+@RequestMapping("/comments")
+public class CommentController {
+	private CommentService commentService;
+	private ModelMapper mapper;
+	
+	@Autowired
+	public CommentController(CommentService commentService, ModelMapper mapper) {
+		this.commentService = commentService;
+		this.mapper = mapper;
+	}
+	
+	@PostMapping
+	public String addComment
+	
+}

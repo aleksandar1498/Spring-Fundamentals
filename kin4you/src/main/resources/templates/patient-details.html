@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:include="~{fragments/header::head('Patient Details')}"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+</head>
+<body>
+	<main>
+		<th:block th:replace="~{fragments/navigation-bar::nav}" />
+		<div class="container bg-kin4you" th:object="${patient}">
+			<i><h2 class="text-center text-white mt-5 mb-5">Patient
+					Details</h2></i>
+			<div class='row mb-4 d-flex justify-content-around'>
+				<div class="col-md-12 d-flex flex-column  mb-3">
+					<!-- <img width="100%"
+                     th:src="*{imageUrl}">-->
+					<div class="row">
+						<div class="col-md-4">
+							<img style="width: 90%"
+								src="https://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/people19.png"/>
+						</div>
+						<div class="col-md-6">
+							<h2>First Name</h2>
+							<p th:text="*{firstName}"></p>
+							<h2>Last Name</h2>
+							<p th:text="*{lastName}"></p>
+						</div>
+						<div class="col-md-2">
+							<div class="row">
+								<form th:action="@{/patients/{id}/visitation(id=*{id})}" th:method="GET">
+									<input type="submit" class="btn btn-secondary btn_2"  value="Visit"/>
+								</form>
+							</div>
+							<div class="row mt-5">
+								<form th:action="@{/patients/delete/{id}(id=*{id})}">
+									<input type="submit" class="btn btn-danger btn_2"  value="Remove"/>
+								</form>
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr style="color: white">
+			<div class="row justify-content-center">
+				<h2>Visitations History</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 text-center">
+					<table th:if="*{not #lists.isEmpty(visitations)}"
+						class="table table-hover table-striped">
+						<thead class="text-white	">
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">Description</th>
+								<th scope="col">Date</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="v ,vStat : *{visitations}" th:object="${v}">
+								<td th:text="|${vStat.index+1}|"></td>
+								<td th:text="*{description}"></td>
+								<td th:text="*{#temporals.format(date, 'dd-MM-yyyy HH:mm')}"></td>
+								<td><a class="btn-block"
+								th:href="@{/visitations/{id}(id=*{id})}">Details</a> 
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div th:if="*{#lists.isEmpty(visitations)}">There are not
+					visitations by the user</div>
+			</div>
+		</div>
+
+	</main>
+	<script>
+	$(".btn-danger").on("click",function(event){
+		 let confirms = confirm("Are you sure!");
+		 if(!confirms){
+			event.preventDefault();
+			return;
+		 }
+	});
+		
+	</script>
+</body>
+</html>

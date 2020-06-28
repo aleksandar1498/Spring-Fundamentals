@@ -1,0 +1,27 @@
+package bg.softuni.andreys.service;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import bg.softuni.andreys.common.enums.CategoryType;
+import bg.softuni.andreys.domain.service.CategoryServiceModel;
+import bg.softuni.andreys.persistence.repositories.CategoryRepository;
+
+public class CategoryServiceImpl implements CategoryService{
+	private CategoryRepository categoryRepo;
+	private ModelMapper mapper;
+	
+	@Autowired
+	public CategoryServiceImpl(CategoryRepository categoryRepo, ModelMapper mapper) {
+		this.categoryRepo = categoryRepo;
+		this.mapper = mapper;
+	}
+
+
+	@Override
+	public CategoryServiceModel findCategoryBy(CategoryType category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

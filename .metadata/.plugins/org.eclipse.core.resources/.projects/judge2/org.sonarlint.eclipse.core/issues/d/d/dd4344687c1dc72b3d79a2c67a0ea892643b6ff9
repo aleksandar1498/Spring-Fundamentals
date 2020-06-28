@@ -1,0 +1,9 @@
+
+}
+java:S1192!"MDefine a constant instead of duplicating this literal "exercise-add" 3 times.(Ά€βρHΒ“RCRITICALZ
+CODE_SMELL
+{
+java:S1128"IRemove this unused import 'org.springframework.web.servlet.ModelAndView'.(Η¨ÿδϋÿÿÿÿHΐ“RMINORZ
+CODE_SMELL
+j	java:S106-"9Replace this use of System.out or System.err by a logger.(Ι„όÿÿÿÿHΑ“RMAJORZ
+CODE_SMELL

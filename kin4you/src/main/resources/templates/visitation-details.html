@@ -1,0 +1,16 @@
+<html lang="en">
+<th:block th:replace="~{fragments/header::head('Visitation Details')}"/>
+<body>
+	<main>
+		<th:block th:replace="~{fragments/navigation-bar::nav}" />
+		<div class="container bg-kin4you" th:object="${visitation}">
+			<i>
+			<h2 class="text-center text-white mt-5 mb-5">Visitation Details
+					Details</h2></i>
+			<h4 th:text="|Visitation No *{id}|"></h4>
+			<p><i th:text="|Date : *{#temporals.format(date, 'dd-MM-yyyy HH:mm')}|"></i></p>
+			<textarea type="textarea" th:field="*{description}" cols="100" rows="10" disabled></textarea>
+		</div>
+	</main>
+</body>
+</html>

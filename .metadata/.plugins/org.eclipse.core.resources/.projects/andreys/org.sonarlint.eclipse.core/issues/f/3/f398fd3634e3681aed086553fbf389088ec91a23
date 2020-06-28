@@ -1,0 +1,10 @@
+
+q	java:S106'"9Replace this use of System.out or System.err by a logger.(™Ô•Ôùÿÿÿÿ8·‚´ç¬.HÎRMAJORZ
+CODE_SMELL
+‡
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.ModelAttribute'.(®ùæé8íğ±ç¬.HÉRMINORZ
+CODE_SMELL
+k
+java:S2039"/Explicitly declare the visibility for "mapper".(ËøÈşÿÿÿÿ8íğ±ç¬.HÊRMINORZVULNERABILITY
+p
+java:S2039"4Explicitly declare the visibility for "itemService".(·Á¥­ûÿÿÿÿ8íğ±ç¬.HËRMINORZVULNERABILITY

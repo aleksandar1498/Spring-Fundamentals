@@ -1,0 +1,31 @@
+package bg.softuni.andreys.persistence.entities;
+
+import bg.softuni.andreys.persistence.User;
+
+public class JpaUser extends BaseEntity implements User {
+
+	@Override
+	public String getUsername() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getBudget() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

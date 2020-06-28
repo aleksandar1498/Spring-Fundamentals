@@ -1,0 +1,6 @@
+1589811759892	Rename type 'JpaEventUser'
+1589812492127	Rename type 'EventUserKey'
+1589812507793	Rename type 'InterestEventKey'
+1589813089800	Rename type 'JpaInterestEvent'
+1589813347355	Rename type 'UserJoinEventKey'
+1589820142550	Rename type 'UserEventKey'

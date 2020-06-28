@@ -1,0 +1,5 @@
+package bg.softuni.shopping.service;
+
+public interface ProductService {
+
+}

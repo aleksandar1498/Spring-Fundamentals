@@ -1,0 +1,22 @@
+package bg.softuni.judge.utils;
+
+import org.modelmapper.Converter;
+import org.modelmapper.spi.MappingContext;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class ServiceToEntityConverter<S,D> implements Converter<S, D>{
+	private JpaRepository<S, String> repo;
+	
+	public ServiceToEntityConverter(JpaRepository<S, String> repo) {
+		this.repo = repo;
+	}
+
+	@Override
+	public D convert(MappingContext<S, D> context) {
+		if(context.getSource() == null) {
+			return null;
+		}
+		return this.repo.findOne(example)
+	}
+
+}

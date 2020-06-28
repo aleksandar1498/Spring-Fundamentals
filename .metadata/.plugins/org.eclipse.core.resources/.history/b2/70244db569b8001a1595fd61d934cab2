@@ -1,0 +1,7 @@
+package bg.softuni.shopping.service;
+
+import bg.softuni.shopping.domain.service.CategoryServiceModel;
+
+public interface CategoryService {
+	CategoryServiceModel create(CategoryServiceModel category);
+}

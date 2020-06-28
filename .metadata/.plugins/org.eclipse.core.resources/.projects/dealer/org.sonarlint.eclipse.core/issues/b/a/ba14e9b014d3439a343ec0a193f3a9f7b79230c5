@@ -1,0 +1,10 @@
+
+p	java:S106/"9Replace this use of System.out or System.err by a logger.(àÛ¹›þÿÿÿÿ8®æ¤¦©.HþoRMAJORZ
+CODE_SMELL
+p	java:S1061"9Replace this use of System.out or System.err by a logger.(ì½Ý®ÿÿÿÿÿ8®æ¤¦©.HüoRMAJORZ
+CODE_SMELL
+d
+java:S16020",Remove useless curly braces around statement(ª…œ“øÿÿÿÿ8®æ¤¦©.HýoRMINORZ
+CODE_SMELL
+p	java:S106;"9Replace this use of System.out or System.err by a logger.(È©™¼øÿÿÿÿ8°Û…§©.H°pRMAJORZ
+CODE_SMELL

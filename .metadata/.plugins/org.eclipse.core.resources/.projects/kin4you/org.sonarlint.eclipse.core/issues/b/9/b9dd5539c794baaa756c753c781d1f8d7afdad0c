@@ -1,0 +1,8 @@
+
+bWeb:ImgWithoutAltCheck"%Add an "alt" attribute to this image.(¢²ñçøÿÿÿÿ8«­¹Ò©.H¯xRMINORZBUG
+_Web:PageWithoutTitleCheck"Add a <title> tag to this page.(¬¯¹˜ÿÿÿÿÿ8ð¤“¹ª.H°xRMAJORZBUG
+kWeb:AvoidCommentedOutCodeCheck"Remove this commented out code.(þ´±Üþÿÿÿÿ8‚¥£Ñ©.H±xRMAJORZ
+CODE_SMELL
+^Web:BoldAndItalicTagsCheck
+"Replace this <i> tag by <em>.(»³—ãùÿÿÿÿ8¡ç¯Ó©.H²xRMINORZBUG
+cWeb:TableWithoutCaptionCheck3" Add a description to this table.(á¾àÃúÿÿÿÿ8Äýÿø©.H³xRMINORZBUG
